@@ -24,8 +24,8 @@ header {
 
     height: 55px;
     padding: 0px;
-    margin-top: -30px;
-    margin: auto;   
+   
+    width:100%;  
  
 
     color: #333;    
@@ -34,7 +34,7 @@ header {
 }
 
 .nav-main {
-    width: 960px;
+    max-width: 960px;
     margin: auto;  
 }
 
@@ -58,6 +58,14 @@ h4 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a:link, a:visited {
+    color:#4aaaa5;
+}
+
+
+
+
+
 .body-main {
     background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/floor-tile.png");
     padding:30px;
@@ -67,32 +75,55 @@ h4 {
     margin: auto;
     margin-top: 20px;
     margin-bottom: 10px;    
-    width: 960px;
+    max-width: 960px;
+    min-width:300px;
     height: 500px;
     background: #fdfdfd; 
     border: 1px solid rgb(10, 10, 10);
 }
 
 .body-box-title {
-    position: relative;
-    left:20px;
+    float:left;
+   
     border-bottom: 2px solid #4aaaa5;
     width: 900px;
 }
 
 .body-box-img {
-    position: relative;
+    float:left;
     left: 10px;    
     height: 220px;
     width: 180px;
-    top: 20px;
+   
 }
 
 .body-box-p {
-    position: relative; 
-    left: 328px;
-    top: -220px;
-    width: 600px; 
+    float:right;
+    
+    max-width: 600px; 
+    min-width:300px;
+}
+
+
+.portfolio-box {
+    float: left;
+    margin: 20px;
+    width: 220px;
+    height: 220px;
+    background: url("../images/cal.jpg")
+}
+
+.portfolio-box-label {
+    
+    background-color: #4aaaa5;
+    weight:100%;
+}
+
+
+.container {
+    float:left;
+    margin: 10px;
+    width: 100%;
 }
 
 img {   
@@ -110,3 +141,67 @@ img {
     font-size: 10px;
     text-align: center
 }   
+
+/* from w3c */
+
+input[type=text], select, textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #4aaaa5;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color:white;
+    padding: 20px;
+    max-width: 800px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
