@@ -97,6 +97,7 @@ a:link, a:visited {
    
 }
 
+
 .body-box-p {
     float:right;
     
@@ -106,18 +107,31 @@ a:link, a:visited {
 
 
 .portfolio-box {
+    position: relative;
     float: left;
     margin: 20px;
-    width: 220px;
-    height: 220px;
-    background: url("../images/cal.jpg")
+    width: 150px;
+    height: 150px;
+    background: url("../images/cal.jpg") center/cover;
 }
 
 .portfolio-box-label {
     
+    bottom: 10px;
+    position: absolute;
     background-color: #4aaaa5;
-    weight:100%;
+    width:100%;
+    padding: 10
 }
+
+.portfolio-box span {
+    color: white;
+    padding:10px;
+    display:block;
+    text-align: center;
+
+}
+
 
 
 .container {
